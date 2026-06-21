@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Studio — Art by [Her Name]</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-name">[Her Name]</div>
+  <ul class="nav-links">
+    <li><a href="#gallery">Work</a></li>
+    <li><a href="#shop">Shop</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <p class="hero-eyebrow">Paintings &amp; Drawings</p>
+    <h1 class="hero-title">Where colour<br>finds its <em>quiet voice.</em></h1>
+    <p class="hero-body">
+      Original works created with patience and feeling — each piece a small world made with brush, pencil, and time.
+    </p>
+  </div>
+  <span class="hero-scroll">Scroll to explore</span>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+  <div class="section-header">
+    <h2 class="section-title">Selected works</h2>
+    <span class="section-note">Click to view</span>
+  </div>
+
+  <p class="upload-hint">
+    💡 Replace the placeholder colours below with your own images — add an &lt;img src="your-file.jpg"&gt; inside each .artwork-frame
+  </p>
+
+  <div class="gallery-grid">
+    <div class="artwork" onclick="openLightbox('Untitled No. 1', 'Oil on canvas — 2024')">
+      <div class="artwork-frame"></div>
+      <div class="artwork-meta">
+        <div class="artwork-title">Untitled No. 1</div>
+        <div class="artwork-detail">Oil on canvas — 2024</div>
+      </div>
+    </div>
+    <div class="artwork" onclick="openLightbox('Evening Study', 'Pencil on paper — 2024')">
+      <div class="artwork-frame"></div>
+      <div class="artwork-meta">
+        <div class="artwork-title">Evening Study</div>
+        <div class="artwork-detail">Pencil on paper — 2024</div>
+      </div>
+    </div>
+    <div class="artwork" onclick="openLightbox('Warm Light', 'Watercolour — 2023')">
+      <div class="artwork-frame"></div>
+      <div class="artwork-meta">
+        <div class="artwork-title">Warm Light</div>
+        <div class="artwork-detail">Watercolour — 2023</div>
+      </div>
+    </div>
+    <div class="artwork" onclick="openLightbox('Still Life with Cloth', 'Oil on board — 2023')">
+      <div class="artwork-frame"></div>
+      <div class="artwork-meta">
+        <div class="artwork-title">Still Life with Cloth</div>
+        <div class="artwork-detail">Oil on board — 2023</div>
+      </div>
+    </div>
+    <div class="artwork" onclick="openLightbox('Portrait Study', 'Charcoal — 2023')">
+      <div class="artwork-frame"></div>
+      <div class="artwork-meta">
+        <div class="artwork-title">Portrait Study</div>
+        <div class="artwork-detail">Charcoal — 2023</div>
+      </div>
+    </div>
+    <div class="artwork" onclick="openLightbox('Garden in Late Summer', 'Gouache — 2022')">
+      <div class="artwork-frame"></div>
+      <div class="artwork-meta">
+        <div class="artwork-title">Garden in Late Summer</div>
+        <div class="artwork-detail">Gouache — 2022</div>
+      </div>
+    </div>
+    <div class="artwork" onclick="openLightbox('The Blue Hour', 'Oil on canvas — 2022')">
+      <div class="artwork-frame"></div>
+      <div class="artwork-meta">
+        <div class="artwork-title">The Blue Hour</div>
+        <div class="artwork-detail">Oil on canvas — 2022</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SHOP -->
+<section class="shop" id="shop">
+  <div class="section-header">
+    <h2 class="section-title">Shop</h2>
+    <span class="section-note">Enquire to purchase</span>
+  </div>
+
+  <!-- FILTER TABS -->
+  <div class="shop-filters">
+    <button class="shop-filter active" onclick="filterShop('all', this)">All</button>
+    <button class="shop-filter" onclick="filterShop('original', this)">Originals</button>
+    <button class="shop-filter" onclick="filterShop('print', this)">Prints</button>
+    <button class="shop-filter" onclick="filterShop('commission', this)">Commissions</button>
+  </div>
+
+  <div class="shop-grid">
+
+    <!-- ORIGINALS -->
+    <div class="shop-item" data-type="original">
+      <div class="shop-frame" style="background:#d4b0be;"></div>
+      <div class="shop-meta">
+        <div class="shop-item-header">
+          <div>
+            <div class="shop-item-title">Untitled No. 1</div>
+            <div class="shop-item-detail">Oil on canvas · 40×50 cm · 2024</div>
+          </div>
+          <div class="shop-price">€680</div>
+        </div>
+        <div class="shop-tags"><span class="shop-tag">Original</span><span class="shop-tag">One of a kind</span></div>
+        <button class="shop-enquire" onclick="enquire('Untitled No. 1', 'original', '€680')">Enquire</button>
+      </div>
+    </div>
+
+    <div class="shop-item" data-type="original">
+      <div class="shop-frame" style="background:#c99ab0;"></div>
+      <div class="shop-meta">
+        <div class="shop-item-header">
+          <div>
+            <div class="shop-item-title">Evening Study</div>
+            <div class="shop-item-detail">Pencil on paper · 21×29 cm · 2024</div>
+          </div>
+          <div class="shop-price">€220</div>
+        </div>
+        <div class="shop-tags"><span class="shop-tag">Original</span><span class="shop-tag sold-tag">Sold</span></div>
+        <button class="shop-enquire sold-btn" disabled>Sold</button>
+      </div>
+    </div>
+
+    <div class="shop-item" data-type="original">
+      <div class="shop-frame" style="background:#ddc3ce;"></div>
+      <div class="shop-meta">
+        <div class="shop-item-header">
+          <div>
+            <div class="shop-item-title">Still Life with Cloth</div>
+            <div class="shop-item-detail">Oil on board · 30×30 cm · 2023</div>
+          </div>
+          <div class="shop-price">€450</div>
+        </div>
+        <div class="shop-tags"><span class="shop-tag">Original</span></div>
+        <button class="shop-enquire" onclick="enquire('Still Life with Cloth', 'original', '€450')">Enquire</button>
+      </div>
+    </div>
+
+    <!-- PRINTS -->
+    <div class="shop-item" data-type="print">
+      <div class="shop-frame" style="background:#b88a9e;"></div>
+      <div class="shop-meta">
+        <div class="shop-item-header">
+          <div>
+            <div class="shop-item-title">Warm Light — Print</div>
+            <div class="shop-item-detail">Giclée print · A3 · Edition of 30</div>
+          </div>
+          <div class="shop-price">€85</div>
+        </div>
+        <div class="shop-tags"><span class="shop-tag">Print</span><span class="shop-tag">Signed</span></div>
+        <button class="shop-enquire" onclick="enquire('Warm Light (Print)', 'print', '€85')">Enquire</button>
+      </div>
+    </div>
+
+    <div class="shop-item" data-type="print">
+      <div class="shop-frame" style="background:#d6bac6;"></div>
+      <div class="shop-meta">
+        <div class="shop-item-header">
+          <div>
+            <div class="shop-item-title">Garden in Late Summer — Print</div>
+            <div class="shop-item-detail">Giclée print · A2 · Edition of 20</div>
+          </div>
+          <div class="shop-price">€120</div>
+        </div>
+        <div class="shop-tags"><span class="shop-tag">Print</span><span class="shop-tag">Signed</span></div>
+        <button class="shop-enquire" onclick="enquire('Garden in Late Summer (Print)', 'print', '€120')">Enquire</button>
+      </div>
+    </div>
+
+    <!-- COMMISSIONS -->
+    <div class="shop-item commission-card" data-type="commission">
+      <div class="commission-body">
+        <p class="commission-eyebrow">Commission</p>
+        <h3 class="commission-title">A piece made just for you.</h3>
+        <p class="commission-text">
+          Whether it's a portrait, a place that means something to you, or a colour you'd like to live with — I'll work with you from the first sketch to the finished painting.
+        </p>
+        <ul class="commission-list">
+          <li>Small works from <strong>€300</strong></li>
+          <li>Medium works from <strong>€600</strong></li>
+          <li>Large works from <strong>€1 200</strong></li>
+        </ul>
+        <p class="commission-note">Delivery: 4–8 weeks · Worldwide shipping available</p>
+        <button class="shop-enquire" onclick="enquire('Custom commission', 'commission', 'TBD')">Start a conversation</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-portrait">
+    <div class="portrait-placeholder">
+      <span class="portrait-caption">— Replace with a photo of her</span>
+    </div>
+  </div>
+  <div class="about-text">
+    <p class="about-eyebrow">About</p>
+    <h2 class="about-title">A studio practice rooted in observation.</h2>
+    <p class="about-body">
+      I make paintings and drawings that pay close attention to the ordinary — a fold of fabric, the way light crosses a table, the brief weight of a still afternoon. My work grows slowly, from long looking and many attempts.
+    </p>
+    <p class="about-body">
+      Based in [City], I work primarily in oil and watercolour, with occasional forays into charcoal and pencil. Commissions are welcome — I love working from photographs or from life.
+    </p>
+    <div class="about-signature">[Her Name]</div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-left">
+    <p class="contact-eyebrow">Get in touch</p>
+    <h2 class="contact-title">Commission a piece or say hello.</h2>
+    <p class="contact-body">
+      Whether you're looking for an original work, a gift, or just want to chat about painting — please reach out. I respond to all messages.
+    </p>
+    <div class="contact-details">
+      <div class="contact-item">
+        <span class="contact-label">Email</span>
+        <span class="contact-value">hello@[hername].com</span>
+      </div>
+      <div class="contact-item">
+        <span class="contact-label">Based</span>
+        <span class="contact-value">[City], [Country]</span>
+      </div>
+    </div>
+  </div>
+  <div class="contact-right">
+    <form class="contact-form" onsubmit="handleSubmit(event)">
+      <div class="form-group">
+        <label class="form-label" for="name">Name</label>
+        <input class="form-input" id="name" type="text" placeholder="Your name" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="email">Email</label>
+        <input class="form-input" id="email" type="email" placeholder="your@email.com" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="message">Message</label>
+        <textarea class="form-textarea" id="message" placeholder="Tell me about what you have in mind..." required></textarea>
+      </div>
+      <button class="form-submit" type="submit">Send message</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-name">[Her Name]</div>
+  <div class="footer-copy">&copy; 2024 — All rights reserved</div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <div class="lightbox-inner" onclick="event.stopPropagation()">
+    <button class="lightbox-close" onclick="closeLightbox()">Close ✕</button>
+    <div class="lightbox-img" id="lightbox-img" style="background: var(--cream-deep);"></div>
+    <div style="padding: 1rem 0; color: rgba(250,247,242,0.7); font-family: 'Cormorant Garamond', serif; font-size: 1.05rem;" id="lightbox-caption"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
